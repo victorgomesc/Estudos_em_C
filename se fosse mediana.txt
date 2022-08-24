@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    int x;
+    scanf("%d", &x);
+    float aux = 0;
+    
+    float vet[x];
+    for(int i = 0;i < x;i++){
+        scanf("%f", &vet[i]);
+    }
+    
+    for(int i = 0;i <= x;i++){
+        for(int b = 1;b < x;b++){
+            if(vet[b-1] > vet[b]){
+                aux = vet[b];
+                vet[b] = vet[b-1];
+                vet[b-1] = aux;
+            }
+        }
+    }
+    if(x % 2 != 0){
+        printf("%.1f", vet[x/2]);
+    }
+    else{
+        printf("%.1f", (vet[x/2] + vet[x/2-1])/2);
+    }
+}

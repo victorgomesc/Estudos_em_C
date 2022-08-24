@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(){
+    int n1;
+    int carta;
+    int ac = 0;
+    int ax = 0;
+    int resu;
+    
+    scanf("%d", &n1);
+    
+    for(int i = 1;i <= n1; i++){
+        scanf("%d", &carta);
+        if(carta == 11 || carta == 12 || carta == 13){
+        carta = 10;
+        }
+        if(carta == 1){
+        carta = 11;
+        ax++;
+        }
+        ac += carta;
+    }
+    
+    if (ac <= 21){
+           printf("%d", ac);
+        }
+        else if(ac > 21){
+           for(int b = 1;b <= ax;b++){
+           ac -= 10;
+           if(ac <= 21)
+           break;
+        }
+        
+       printf("%d", ac);
+    }
+}

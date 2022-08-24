@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    
+    char f[10];
+    float maior_media = -1;
+    int maior_id = -1;
+    for(int i = 0;i < n;i++){
+        scanf("%s", f);
+       int id = 10*(f[0] - '0') + (f[1] - '0');
+       float media = ((f[2] - '0') + (f[3] - '0') + (f[4] - '0') + (f[5] - '0')) / 4.0;
+       
+       if(media > maior_media || (media == maior_media && id > maior_id)){
+           maior_media = media;
+           maior_id = id;
+       }
+    }
+    printf("%02d", maior_id);
+}

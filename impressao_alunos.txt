@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+typedef struct{
+    char nome[100];
+    int matricula;
+    char diciplina[100];
+    float nota;
+} aluno;
+
+aluno le_aluno(){
+    aluno a;
+    scanf("%[^\n]\n", a.nome);
+    scanf("%d\n", &a.matricula);
+    scanf("%[^\n]\n", a.diciplina);
+    scanf("%f\n", &a.nota);
+    return a;
+}
+
+void imprime_aluno(aluno a){
+   printf("Nome = %s\n", a.nome);
+   printf("Matrícula = %d\n", a.matricula);
+   printf("Disciplina = %s\n", a.diciplina);
+   printf("Nota = %.1f\n", a.nota);
+}
+
+int main(){
+    aluno a = le_aluno();
+    imprime_aluno(a);
+}

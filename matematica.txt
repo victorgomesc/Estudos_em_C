@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+    int a;
+    int b;
+    int adicao;
+    int subtracao;
+    int multiplicacao;
+    int divisao;
+    int rdivisao;
+    
+    a = 9;
+    b = 3;
+    adicao = a + b;
+    subtracao = a - b;
+    multiplicacao = a * b;
+    divisao = (float) a / b;
+    rdivisao = a % b;
+    
+    printf("%d\n", a);
+    printf("%d\n", b);
+    printf("%d\n", adicao);
+    printf("%d\n", subtracao);
+    printf("%d\n", multiplicacao);
+    printf("%d\n", divisao);
+    printf("%d\n", rdivisao);
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    char f[101];
+    scanf("%[^\n]", f);
+    
+    printf("%c", f[0]);
+    
+    for(int i = 1; f[i];i++){
+        while(f[i] == ' ' && f[i-1] == f[i+1] && (f[i-1] == 'a' || f[i-1] == 'e' || f[i-1] == 'i' || f[i-1] == 'o' || f[i-1] == 'u')){
+            i = i + 2;
+        }
+        printf("%c", f[i]);
+    }
+}

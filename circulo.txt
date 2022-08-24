@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    double r;  //variavel que vai receber o valor correspondente ao raio
+    double p;  //variavel que vai receber o valor de pi
+    double a;  //variavel que vai receber o valor da area do circulo
+    
+    r = 10;
+    p = 3.14;
+    a = (r * r) * p;
+    printf("%f\n", a);
+}

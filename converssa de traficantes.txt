@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char s[100];
+    char p[100];
+    char t[100];
+    
+    scanf("%[^\n] %s %s", s, p, t);
+    
+    for(int i = 0; s[i];i++){
+        int enc = 1;
+        for(int j = 0; p[j];j++){
+            if(p[j] != s[i+j]){
+                enc = 0;
+            }
+    
+        }
+        if(enc == 1){
+                printf("%s", t);
+                i = i + strlen(p) - 1;
+         }else{
+         printf("%c", s[i]);
+        }
+    }
+}

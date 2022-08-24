@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    int x1;
+    int cont;
+    int cont1;
+    
+    scanf("%d", &x1);
+    
+    for(int i = 1;i <= x1; i++){
+        if (i % 2 == 0){
+            cont++;
+        }
+        if (i % 2 != 0){
+            cont1++;
+        }
+    }
+    if (cont > cont1){
+        printf("rebeldes");
+    }else{
+        printf("soldados");
+    }
+}

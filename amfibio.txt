@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(){
+    int x;
+    int y;
+    int cont = 0;
+    
+    scanf("%d", &x);
+    int vet1[x];
+    for(int i = 0;i < x;i++){
+        scanf("%d", &vet1[i]);
+    }
+    scanf("%d", &y);
+    int vet2[y];
+    for(int i = 0;i <= y;i++){
+        scanf("%d", &vet2[i]);
+    }
+    for(int i = 0;i < x;i++){
+        for(int b = 0;b < y;b++){
+            if(vet1[i] == vet2[b]){
+                cont++;
+                break;
+            }
+        }
+    }
+    if(cont == x){
+        printf("sim");
+    }else{
+        printf("nao");
+    }
+}

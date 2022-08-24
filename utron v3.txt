@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char f[100];
+    char p[100];
+    
+    scanf("%s", f);
+    
+    while(scanf("%s", p) > 0){
+        int cont = 0;
+        for(int i = 0; p[i];i++){
+            for(int j = 0; f[j];j++){
+                if(p[i] == f[j]){
+                    cont++;
+                }
+            }
+        }
+    int n = strlen(p);
+    if(cont == n){
+        printf("chefe ");
+    }else if(cont > n/2){
+        printf("ultron ");
+    }else{
+        printf("pessoa ");
+    }
+    }
+}

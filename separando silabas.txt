@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char f[100];
+    scanf("%[^\n]", f);
+    
+    for(int i = 0; f[i];i++){
+        printf("%c", f[i]);
+        if((f[i] == 'a' || f[i] == 'e' || f[i] == 'i' || f[i] == 'o' || f[i] == 'u' ||
+        f[i] == 'A' || f[i] == 'E' || f[i] == 'I' || f[i] == 'O' || f[i] == 'U')&&
+        (((f[i+1] >= 'a' && f[i+1] <= 'z')||(f[i+1] >='A' && f[i+1] <= 'Z'))&&
+        ( ! (f[i+1] == 'a' || f[i+1] == 'e' || f[i+1] == 'i' || f[i+1] == 'o' || f[i+1] == 'u' ||
+        f[i+1] == 'A' ||f[i+1] == 'E' || f[i+1] == 'I' || f[i+1] == 'O' || f[i+1] == 'U')))){
+        printf("-");
+            }
+        }
+ }

@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+typedef struct{
+    char nome[100];
+    int matricula;
+    char diciplina[100];
+    float nota;
+} aluno;
+
+aluno le_aluno(){
+    aluno a;
+    scanf("%[^\n]\n", a.nome);
+    scanf("%d\n", &a.matricula);
+    scanf("%[^\n]\n", a.diciplina);
+    scanf("%f\n", &a.nota);
+    return a;
+}
+
+void imprime_aluno_maior_nota(aluno a1, aluno a2){
+   if(a1.nota > a2.nota){
+       printf("%s , %.1f", a1.nome, a1.nota);
+   }
+   else if(a1.nota < a2.nota){
+       printf("%s , %.1f", a2.nome, a2.nota);
+   }
+   else{
+       printf("%s e %s , %.1f", a1.nome, a2.nome, a1.nota);
+   }
+}
+
+int main(){
+    aluno a1 = le_aluno();
+    aluno a2 = le_aluno();
+    imprime_aluno_maior_nota(a1,a2);
+}

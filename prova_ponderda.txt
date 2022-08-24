@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+typedef struct{
+    float nota;
+    int peso;
+} provas;
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    provas p[n];
+    
+    for(int i = 0;i < n;i++){
+        scanf("%f", &p[i].nota);
+    }
+    for(int i = 0;i < n;i++){
+        scanf("%d", &p[i].peso);
+    }
+    int soma_pesos = 0;
+    for(int i = 0;i < n;i++){
+        soma_pesos += p[i].peso;
+    }
+    float soma_ponderada = 0;
+    for(int i = 0;i < n;i++){
+        soma_ponderada += p[i].peso * p[i].nota;
+    }
+    float media = soma_ponderada / soma_pesos;
+    printf("%.2f", media);
+}

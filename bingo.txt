@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+    int vet[6];
+    int m[4][4];
+    
+    for(int i = 0;i <= 5;i++){
+        scanf("%d", &vet[i]);
+    }
+    
+    for(int t = 0;t <= 3;t++){
+        for(int j = 0;j <= 3;j++){
+            scanf("%d", &m[t][j]);
+        }
+    }
+    int cont = 0;
+    for(int i = 0;i <= 5;i++){
+        for(int t = 0;t <= 3;t++){
+            for(int j = 0;j <= 3;j++){
+                if(vet[i] == m[t][j]){
+                    cont++;
+                }
+            }
+        }
+    }
+    printf("%d", cont);
+}

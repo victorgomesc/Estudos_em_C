@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+
+int main(){
+    int x1; //variavel que vai receber o valor em celssius
+    double y1; //variavel que vai receber o valor em fahrenheit
+    
+    x1 = 10;
+    y1 = x1 * 9 / 5 + (32);
+    
+    printf("%d\n", x1);
+    printf("%f\n", y1);
+}

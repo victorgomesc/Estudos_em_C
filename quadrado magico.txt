@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main(){
+   int m[3][3];
+   for(int i = 0;i <= 2;i++){
+       for(int j = 0;j <= 2;j++){
+           scanf("%d", &m[i][j]);
+       }
+   }
+   int soma = 0;
+   for(int j = 0;j <= 2;j++){
+       soma += m[0][j];
+   }
+   int verdade = 1;
+   for(int i = 0;i <= 2;i++){
+       int soma_linha = 0;
+       for(int j = 0;j <= 2;j++){
+           soma_linha += m[i][j];
+           if(soma_linha != soma){
+               verdade = 0;
+           }
+       }
+   }
+   for(int j = 0;j <= 2;j++){
+       int soma_coluna = 0;
+       for(int i = 0;i <= 2;i++){
+           soma_coluna += m[i][j];
+           if(soma_coluna != soma){
+               verdade = 0;
+           }
+       }
+   }
+   
+   int soma_diagona_principal = 0;
+   for(int i = 0;i < 3;i++){
+       soma_diagona_principal += m[i][i];
+       if(soma_diagona_principal != soma){
+           verdade = 0;
+       }
+   }
+   int diagonal = 0;
+   for(int i = 0;i < 3;i++){
+      diagonal += m[i][2-i];
+      if(diagonal == soma){
+          verdade = 1;
+      }else{
+          verdade = 0;
+      }
+   }
+  
+   
+   if(verdade == 1){
+       printf("sim");
+   }
+   else{
+       printf("nao");
+   }
+}

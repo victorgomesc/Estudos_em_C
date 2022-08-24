@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char v[100];
+    scanf("%[^\n]", v);
+    
+    if(v[0] == ' '){
+        printf("%c", v[0]);
+    }
+    for(int i = 0; v[i];i++){
+        if (! (v[i] == ' ' && v[i+1] == ' ')){
+            printf("%c", v[i]);
+        }
+    }
+    printf("\n");
+}

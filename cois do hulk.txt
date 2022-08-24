@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+    int x, n;
+    int cois;
+    int cont;
+    
+    scanf("%d %d", &x, &n);
+    
+    for (int i = 1; i <= n; i++){
+        scanf("%d", &cois);
+        if (cois > x){
+            cont = cont + 1;
+        }
+             }
+              
+        printf("%d", cont);
+ }
+    

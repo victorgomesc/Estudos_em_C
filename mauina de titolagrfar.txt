@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    char s[101];
+    char t;
+    
+    scanf("%c %s", &t, s);
+    
+    int nulo = 1;
+    for(int i = 0; s[i];i++){
+        if(s[i] != t){
+            if(s[i] != '0'){
+                nulo = 0;
+            }
+            if(!nulo){
+                    printf("%c", s[i]);
+                }
+        }
+    }
+    if(nulo){
+            printf("0");
+            }
+}

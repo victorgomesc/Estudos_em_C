@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+typedef struct{
+    char nome[100];
+    int matricula;
+    char diciplina[100];
+    float nota;
+} aluno;
+
+aluno le_aluno(){
+    aluno a;
+    scanf("%[^\n]\n", a.nome);
+    scanf("%d\n", &a.matricula);
+    scanf("%[^\n]\n", a.diciplina);
+    scanf("%f\n", &a.nota);
+    return a;
+}
+
+void imprime_resultado(aluno a){
+   if(a.nota >= 7){
+       printf("%s aprovado(a) em %s", a.nome, a.diciplina);
+   }
+   else{
+       printf("%s reprovado(a) em %s", a.nome, a.diciplina);
+   }
+}
+
+int main(){
+    aluno a = le_aluno();
+    imprime_resultado(a);
+}

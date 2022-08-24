@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+typedef struct{
+    int dia;
+    int mes;
+    int ano;
+} data;
+
+int main(){
+    data d1, d2;
+    scanf("%d\n%d\n%d\n", &d1.dia, &d1.mes, &d1.ano);
+    scanf("%d\n%d\n%d\n", &d2.dia, &d2.mes, &d2.ano);
+    
+    if(d1.ano > d2.ano){
+        printf("Mais recente");
+    }
+    else if(d1.ano < d2.ano){
+        printf("Mais antiga");
+    }
+    else if(d1.mes > d2.mes){
+        printf("Mais recente");
+    }
+    else if(d1.mes < d2.mes){
+        printf("Mais antiga");
+    }
+    else if(d1.dia > d2.dia){
+        printf("Mais recente");
+    }
+    else if(d1.dia < d2.dia){
+        printf("Mais antiga");
+    }
+    else{
+        printf("Iguais");
+    }
+}

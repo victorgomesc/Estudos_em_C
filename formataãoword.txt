@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(){
+    char f[101];
+    scanf("%[^\n]", f);
+    
+    char l;
+    scanf(" %c", &l);
+    
+    for(int i = 0; f[i];i++){
+        if(l == 'M'){
+            if(f[i] >= 'a' && f[i] <= 'z'){
+                f[i] = f[i] - 32;
+            }
+        }
+        if(l == 'm'){
+            if(f[i] >= 'A' && f[i] <= 'Z'){
+                f[i] = f[i] + 32;
+            }
+        }
+        if(l == 'p'){
+            if(f[0] >= 'A' && f[0] <= 'Z'){
+                f[0] = f[0] + 32;
+            }
+                if(f[i] == ' ' && (f[i+1] >= 'a' && f[i+1] <= 'z') && f[i+2] != ' '){
+                    f[i+1] = f[i+1] - 32;
+                }
+        }
+        if(l == 'i'){
+            if(f[i] >= 'a' && f[i] <= 'z'){
+                f[i] = f[i] - 32;
+            }
+            else if(f[i] >= 'A' && f[i] <= 'Z'){
+                f[i] = f[i] + 32;
+            }
+        }
+    }
+    printf("%s", f);
+    printf("\n");
+}

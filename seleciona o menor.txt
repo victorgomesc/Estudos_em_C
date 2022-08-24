@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    int qj;
+    int nota;
+    int ac;
+    int maior = 0, menor = 0;
+    
+    scanf("%d", &qj);
+    
+    for(int i = 1;i <= qj;i++){
+        scanf("%d", &nota);
+        ac += nota;
+        if(i == 1){
+            maior = nota;
+            menor = nota;
+        }else if(nota > maior){
+            maior = nota;
+        }else if(nota < menor){
+            menor = nota;
+        }
+    }
+    int soma = maior + menor;
+    int resu = ac - soma;
+    printf("%d", resu);
+}

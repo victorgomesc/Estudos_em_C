@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    int vt; //valor total
+    int d;  //desconto
+    double vp; //valor da parcela
+    double cv; //comissao a vista
+    double cp; //comissao a prazo
+    double d1;
+    
+    vt = 1000;
+    d = vt * 10 / 100;
+    d1 = vt - d;
+    vp = (double) vt / 3;
+    cv = d1 * 5 / 100;
+    cp = vt * 5 / 100;
+    
+    printf("%d\n", vt);
+    printf("%f\n", d1);
+    printf("%f\n", vp);
+    printf("%f\n", cv);
+    printf("%f\n", cp);
+}

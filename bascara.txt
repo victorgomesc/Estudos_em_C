@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#include <math.h>
+
+int main(){
+    float a;  //valor de a
+    float b;  //valor de b
+    float c;  //valor de c
+    float x1;  //valor de x1
+    float x2;  //valor de x2
+    float delta;
+    
+    scanf("%f", &a);//recebendo valores
+    scanf("%f", &b);
+    scanf("%f", &c);
+    
+    delta = pow(b,2) - 4 * a * c;  //calculando valor de delta
+    x1 = (-b + sqrt(delta)) / 2 * a; //calculando valor de x1
+    x2 = (-b - sqrt(delta)) / 2 * a; //calculando valor de x2
+    
+    if (delta >= 1){  //quando delta for positivo
+       printf("%.2f" "%.2f", x1, x2); 
+    }
+    
+    if (delta == 0){ //quando delta for igual a 0
+        printf("%.2f", x1);
+    }
+    
+    if (delta < 0){  //quando delta for negativo
+        printf("Nao ha raiz real");
+    }
+}

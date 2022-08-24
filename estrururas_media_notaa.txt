@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+typedef struct{
+    char nome[100];
+    int matricula;
+    char diciplina[100];
+    float nota;
+} aluno;
+
+aluno le_aluno(){
+    aluno a;
+    scanf("%[^\n]\n", a.nome);
+    scanf("%d\n", &a.matricula);
+    scanf("%[^\n]\n", a.diciplina);
+    scanf("%f\n", &a.nota);
+    return a;
+}
+
+float media_alunos(aluno a1, aluno a2){
+    float media = (a1.nota + a2.nota) / 2.0;
+    return media;
+}
+
+int main(){
+    aluno b1 = le_aluno();
+    aluno b2 = le_aluno();
+    float media = media_alunos(b1,b2);
+    printf("Média = %.1f", media);
+}

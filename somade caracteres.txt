@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    char vet[21];
+    scanf("%[^\n]", vet);
+    
+    int soma_par = 0;
+    int soma_impar = 0;
+    for(int i = 0; vet[i];i++){
+        if (i % 2 == 0){
+            soma_par = soma_par + (vet[i] - '0');
+        }else{
+            soma_impar = soma_impar + (vet[i] - '0');
+        }
+    }
+    int dif = soma_par - soma_impar;
+    if(dif <= 0){
+        dif = -dif;
+    }
+    if(dif % 11 == 0){
+        printf("sim");
+    }else{
+        printf("nao");
+    }
+    
+}

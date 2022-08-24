@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+    int x1; //amigo numero 1
+    int x2; //amigo numero 2
+    int x3; //amigo numero 3
+    int total;
+    
+    double y1;
+    double y2;
+    double y3;
+    
+    x1 = 10;
+    x2 = 20;
+    x3 = 30;
+    total = 120;
+    
+    y1 = ((double) x1 / 60) * total;
+    y2 = ((double) x2 / 60) * total;
+    y3 = ((double) x3 / 60) * total;
+    
+    printf("%d\n", x1);
+    printf("%d\n", x2);
+    printf("%d\n", x3);
+    printf("%d\n", total);
+    
+    printf("%f\n", y1);
+    printf("%f\n", y2);
+    printf("%f\n", y3);
+    
+
+}

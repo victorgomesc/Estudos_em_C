@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char x1[100];
+    char x2[100];
+    
+    scanf("%s", x1);
+    scanf("%s", x2);
+    
+    int n1 = 0;
+    int n2 = 0;
+    
+    if(strcmp(x1, "rock") == 0){
+        n1 = 0;
+    }
+    if(strcmp(x1, "fire") == 0){
+        n1 = 1;
+    }
+    if(strcmp(x1, "scissors") == 0){
+        n1 = 2;
+    }
+    if(strcmp(x1, "human") == 0){
+        n1 = 3;
+    }
+    if(strcmp(x1, "sponge") == 0){
+        n1 = 4;
+    }
+    if(strcmp(x1, "paper") == 0){
+        n1 = 5;
+    }
+    if(strcmp(x1, "air") == 0){
+        n1 = 6;
+    }
+    if(strcmp(x1, "water") == 0){
+        n1 = 7;
+    }
+    if(strcmp(x1, "gun") == 0){
+        n1 = 8;
+    }
+    if(strcmp(x2, "rock") == 0){
+        n2 = 0;
+    }
+    if(strcmp(x2, "fire") == 0){
+        n2 = 1;
+    }
+    if(strcmp(x2, "scissrs") == 0){
+        n2 = 2;
+    }
+    if(strcmp(x2, "human") == 0){
+        n2 = 3;
+    }
+    if(strcmp(x2, "sponge") == 0){
+        n2 = 4;
+    }
+    if(strcmp(x2, "paper") == 0){
+        n2 = 5;
+    }
+    if(strcmp(x2, "air") == 0){
+        n2 = 6;
+    }
+    if(strcmp(x2, "water") == 0){
+        n2 = 7;
+    }
+    if(strcmp(x2, "gun") == 0){
+        n2 = 8;
+    }
+    
+    if(n1 == n2){
+        printf("empate");
+    }
+    else if(n2 == (n1 + 1)%9 || n2 == (n1 + 2)%9 || n2 == (n1 + 3)%9 || n2 == (n1 + 4)%9){
+        printf("jog1");
+    }
+    else{
+        printf("jog2");
+    }
+}

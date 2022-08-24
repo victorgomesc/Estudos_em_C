@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(){
+    char f[101];
+    char t[27];
+    char m;
+    
+    scanf("%[^\n]", f);
+    scanf(" %s", t);
+    scanf(" %c", &m);
+    
+    for(int i = 0; f[i];i++){
+        if((f[i] >= 'a' && f[i] <= 'z')||(f[i] >= 'A' && f[i] <= 'Z')){
+             int enc = 0;
+            for(int j = 0; t[j];j++){
+                if(f[i] == t[j] || f[i]+32 == t[j]){
+                    enc = 1;
+                }
+            }
+            if(enc == 1){
+                 f[i] = f[i];
+            }
+            else if(enc == 0){
+                    f[i] = m;
+                }
+        }
+         printf("%c", f[i]);
+    }
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    int provas;
+    float notas;
+    float soma;
+    
+    scanf("%d", &provas);
+    
+    for(int i = 1; i <= provas; i++){
+        scanf("%f", &notas);
+         soma += notas;
+    }
+    float resu = soma / provas;
+    
+    printf("%.1f", resu);
+}

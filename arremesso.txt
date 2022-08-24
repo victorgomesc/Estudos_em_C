@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(){
+    int aremesso1;
+    int aremesso2;
+    int aremesso3;
+    
+    scanf("%d", &aremesso1);
+    scanf("%d", &aremesso2);
+    scanf("%d", &aremesso3);
+    
+    if (aremesso1 = aremesso2 || aremesso1 = aremesso3){
+        printf("2");
+    }
+    
+    if (aremesso2 = aremesso1 || aremesso2 = aremesso3){
+        printf("2");
+    }
+    
+    if (aremesso3 = aremesso1 || aremesso3 = aremesso2){
+        printf("2");
+    }
+    
+    if (aremesso1 = aremesso2 && aremesso1 = aremesso){
+        printf("3");
+    }
+    
+    if (aremesso1 =! aremesso2 && aremesso1 =! aremesso3 && aremesso2 =! aremesso3){
+        printf("0");
+    }
+}

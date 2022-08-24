@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    int n;
+    int s;
+    int jed = 0;
+    int sit = 0;
+    
+    scanf("%d", &n);
+    scanf("%d", &s);
+    
+    for(int i = 1;i <= n / 2;i++){
+        sit += s % 10;
+        s = s / 10;
+    }
+      for(int i = 1;i <= n / 2;i++){
+          jed += s % 10;
+          s = s / 10;
+      }  
+      if(jed == sit){
+          printf("Empate");
+      }else if(jed > sit){
+          printf("Jedi");
+      }else if(sit > jed){
+          printf("Sith");
+      }
+      
+    }
